@@ -1,3 +1,8 @@
+Learning React from John Smilga
+
+https://react-learning-projects.netlify.app/
+
+
 # React Projects
 
 #### React Course
