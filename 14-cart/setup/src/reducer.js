@@ -78,7 +78,7 @@ const reducer = (state, action) => {
         // perform the increase operation
         let tempCart = state.cart
             .map((cartItem) => {
-                if (cartItem.id === action.payload) {
+                if (cartItem.id === action.payload.id) {
                     // ...->get old cartItem values => only change amount
                     // check type of operation (increase or decrease)
                     if (action.payload.type === 'increase') {
@@ -91,7 +91,7 @@ const reducer = (state, action) => {
                 }
                 return cartItem;
             })
-            // filter cart so that items with amoun === 0 will be removed
+            // filter cart so that items with amount === 0 will be removed
             .filter((cartItem) => cartItem.amount !== 0);
 
         return { ...state, cart: tempCart };
